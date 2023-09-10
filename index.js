@@ -28,7 +28,7 @@ form.addEventListener("submit", function (event) {
         submit.disabled = true;
         attempt.textContent = "You have no more attempts. Click on Replay to play again";
         replay.classList.add("jk");
-        displayFinalMessage();
+    
     }
 
     input.value = "";
@@ -53,25 +53,3 @@ const checkResult = (value, random) => {
     finalDis.textContent = `TOTAL WON ${win}, TOTAL LOST ${lost}`;
 }
 
-const displayFinalMessage = () => {
-    switch (win) {
-        case 0:
-            alert("YOU HAVE NOT WON YET");
-            break;
-        case 1:
-            alert("YOU HAVE WON 1 TIME. THAT'S GOOD");
-            break;
-        case 2:
-            alert("YOU HAVE WON 2 TIMES. THAT'S VERY GOOD");
-            break;
-        case 3:
-            alert("YOU HAVE WON 3 TIMES. THAT'S EXCELLENT");
-            break;
-        case 4:
-            alert("YOU HAVE WON 4 TIMES. THAT'S GREAT");
-            break;
-        default:
-            alert("YOU HAVE WON 5 TIMES. THAT'S THE GREATEST!");
-            break;
-    }
-}
